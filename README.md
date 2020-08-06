@@ -1,2 +1,2 @@
 # Reconhecimento-de-Faces
-Um reconhecedor de faces simples e não muito escalável para fins educacionais de como utilizar deep features de forma simples em seus projetos.
+Um reconhecedor de faces simples para fins educacionais de como utilizar deep features em seus projetos.
