@@ -1,7 +1,7 @@
 tasks:
   - name: permissao
     init: echo 'mudando permissão para o jupyter conseguir editar as coisas'
-    command: chmod -R 777 .
+   
   - name: jupyter
     init: echo 'iniciando'
     command: docker-compose up --build -d

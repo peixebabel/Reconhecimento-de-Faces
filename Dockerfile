@@ -1,8 +1,9 @@
-FROM jupyter/datascience-notebook
+FROM jupyter/datascience-notebook:34dbb9c3b0fe
 WORKDIR /project
+USER root
 
-RUN apt-get update
-RUN apt-get install ffmpeg libsm6 libxext6  -y
+RUN sudo apt-get update
+RUN sudo apt-get install ffmpeg libsm6 libxext6  -y
 
 RUN conda install \
     xarray \
@@ -17,4 +18,4 @@ RUN conda install \
 RUN pip install torchvision 
 
 ADD . . 
-RUN chmod -R 777 .
+RUN sudo chmod -R 777 .
