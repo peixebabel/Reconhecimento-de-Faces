@@ -1,0 +1,13 @@
+version: "3"
+services:
+  datascience-notebook:
+      build:
+        context: .
+      volumes:
+        - /workspace/Reconhecimento-de-Faces:/project
+
+      ports:
+        - 8888:8888
+      container_name: datascience-notebook-container
+      environment:
+        JUPYTER_TOKEN: "bacon"

@@ -1,0 +1,13 @@
+tasks:
+  - name: permissao
+    init: echo 'mudando permissão para o jupyter conseguir editar as coisas'
+   
+  - name: jupyter
+    init: echo 'iniciando'
+    command: docker-compose up --build -d
+      
+  
+ports:
+  - port: 3000-8999
+    onOpen: open-browser
+    visibility: public
