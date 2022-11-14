@@ -5,7 +5,7 @@ USER root
 RUN sudo apt-get update
 RUN sudo apt-get install ffmpeg libsm6 libxext6  -y
 
-RUN conda install \
+RUN conda install -y \
     xarray \
     netCDF4 \
     bottleneck \
@@ -13,9 +13,10 @@ RUN conda install \
     pandas \
     matplotlib \
     jupyterlab \
-    opencv
-
-RUN pip install torchvision 
+    opencv \
+    mtcnn \
+    torchvision \
+    tensorflow
 
 ADD . . 
 RUN sudo chmod -R 777 .
